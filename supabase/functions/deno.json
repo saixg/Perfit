@@ -1,0 +1,11 @@
+{
+  "compilerOptions": { "strict": true, "noUncheckedIndexedAccess": true },
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-explicit-any",
+        "no-import-prefix"
+      ]
+    }
+  }
+}

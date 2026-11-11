@@ -1,0 +1,13 @@
+# Minimal config for `supabase` CLI deploys (project: perfit).
+# verify_jwt = false: functions authorize in code (getClaims), because the gateway's built-in check
+# only understands legacy JWT keys and resolve-chart must also work for signed-out users.
+project_id = "perfit"
+
+[functions.resolve-chart]
+verify_jwt = false
+
+[functions.recommend]
+verify_jwt = false
+
+[functions.feedback]
+verify_jwt = false

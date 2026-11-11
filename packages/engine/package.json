@@ -1,0 +1,15 @@
+{
+  "name": "@perfit/engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "perfit fit engine: pure, dependency-free size recommendation. Runs in browsers and Deno.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./fixtures": "./fixtures/charts.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  }
+}

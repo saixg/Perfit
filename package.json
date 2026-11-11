@@ -1,0 +1,19 @@
+{
+  "name": "perfit",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm run test -w @perfit/engine",
+    "typecheck": "tsc -p packages/engine && tsc -p apps/playground",
+    "playground": "npm run dev -w @perfit/playground",
+    "functions:bundle": "node scripts/bundle-functions.mjs",
+    "functions:check": "cd supabase/functions && npx -y deno@2.9.6 check --config deno.json */index.ts && npx -y deno@2.9.6 lint --config deno.json ."
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

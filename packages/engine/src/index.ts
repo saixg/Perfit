@@ -1,0 +1,12 @@
+export * from './types.ts';
+export { DEFAULT_CONFIG, ENGINE_VERSION, bandMid, type Band, type EngineConfig, type Tau } from './config.ts';
+export { CM_PER_IN, fmtLen, fromCm, inch, parseLength, toCm } from './units.ts';
+export { headerToPoint, parseFitType, sizeRank } from './labels.ts';
+export { normalizeChart, parseValue } from './normalize.ts';
+export { applyFeedback, bodyChestFromKnownSize, pickReference, resolveProfile } from './profile.ts';
+export { chestBand, penalty, rankSizes, scoreSize } from './score.ts';
+export { computeConfidence } from './confidence.ts';
+export { explain } from './explain.ts';
+export { recommend } from './recommend.ts';
+export { parseDelimited, tableToRawChart, type TableOptions } from './table.ts';
+export { canonicalJson, hashChart, sha256Hex } from './hash.ts';
