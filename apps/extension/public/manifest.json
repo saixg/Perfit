@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "perfit",
+  "short_name": "perfit",
+  "version": "0.1.0",
+  "description": "Your shirt size on Myntra, picked from the product's own size chart, with the reasons.",
+  "minimum_chrome_version": "120",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.myntra.com/*",
+    "https://rvvbztzudcipbosavhii.supabase.co/*"
+  ],
+  "background": { "service_worker": "sw.js", "type": "module" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.myntra.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "action": { "default_title": "perfit: open your fit profile" }
+}
